@@ -118,6 +118,13 @@ text-transform: uppercase;
     cursor: pointer;
 } 
 
+.hero-btn:hover,
+.hero-btn:focus {
+    --hero-btn-bgc: #188CE8;
+    background-color: var(--hero-btn-bgc);
+    /* New local CSS-custom-prop for just one used color */
+}
+
 /* Section Title */
 .section-title {
     color: var(--title-text-color);
@@ -144,8 +151,8 @@ text-transform: uppercase;
 }
 
 .team-member-card {
-    width: 270px;
-    height: 368px;
+    /* width: 270px;
+    height: 368px; */
     background-color: var(--primary-bg-color);
 }
 
@@ -191,7 +198,7 @@ text-transform: uppercase;
 .location {
     --location-text-color: #ffffff;
     color: var(--location-text-color);
-
+    /* New local CSS-custom-prop */
     text-decoration: none;
 }
 
@@ -226,6 +233,13 @@ text-transform: uppercase;
     line-height: 1.62;
     letter-spacing: inherit;    
     cursor: pointer;
+}
+
+.filter-btn-list .filter-btn.current {
+    --filter-btn-color: #FFFFFF;
+    color: var(--filter-btn-color);
+    /* New local CSS-custom-prop */
+    background-color: var(--accent-color);
 }
 
 .filter-btn:hover,
