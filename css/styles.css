@@ -1,0 +1,264 @@
+:root {
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --accent-color: #2196F3;
+    --primary-bg-color: #ffffff;
+    --hero-bg-color: #2F303A; 
+    --third-bg-color: #F5F4FA;
+    --header-logo-black-color: #000000; 
+    --footer-contacts-color: rgba(255, 255, 255, 0.6);
+}
+
+body {
+    color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
+
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+/* main bgc: #FFFFFF; */
+/* section-Наша-команда background: #F5F4FA; */
+/* Hero background: #2F303A; */
+/* Team background: #F5F4FA; */  
+
+
+/* Logo common styles in header & footer */
+.common-logo {
+    text-decoration: none;
+
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+}
+
+.logo-span {
+    color: var(--accent-color); 
+}
+
+/* Content >Studio< in header logo */
+.header-logo {
+    color: var(--header-logo-black-color);
+}
+
+/* Відміна disc для ul > li */
+.list {
+    list-style: none;
+}
+
+/* Site nav */
+.site-nav .link {
+    color: var(--title-text-color);
+    text-decoration: none;
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.site-nav .link.current {
+    color: var(--accent-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+    color: var(--accent-color);
+}
+
+/* Phone & email links common style */
+.contact-links {
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+/* Header Contacts Font Styles */
+.header-contacts {
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+/* Header email & phone links*/
+.header-contacts:hover,
+.header-contacts:focus {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    color: var(--primary-bg-color);
+    background-color: var(--hero-bg-color);
+}
+
+/* Hero Title */
+.hero-title {
+font-weight: 900;
+font-size: 44px;
+line-height: 1.36;
+letter-spacing: 0.06em;
+
+text-align: center;
+text-transform: uppercase;
+}
+
+/* Hero Button */
+.hero-btn {
+    --btn-color: #ffffff; 
+    color: var(--btn-color);/* New local CSS-custom-prop with correct name, not Global var(--primary-bg-color)*/
+    background-color: var(--accent-color);
+    
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+} 
+
+/* Section Title */
+.section-title {
+    color: var(--title-text-color);
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+
+/* Feature List Title */
+.feature-list .title {
+    color: var(--title-text-color);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+/* Our Team */
+.third-bgc {
+    background-color: var(--third-bg-color);
+}
+
+.team-member-card {
+    width: 270px;
+    height: 368px;
+    background-color: var(--primary-bg-color);
+}
+
+/* Team Member - common styles for name and role*/
+.team-member {
+    color: var(--title-text-color);
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+
+/* Team Member Role Content */
+.member-role {
+    color: var(--primary-text-color);
+
+    font-weight: 400;
+}
+
+/* Footer */
+.footer {
+    background: var(--hero-bg-color);
+}
+
+/* Content >Studio< in footer logo */
+.footer-logo {
+    color: var(--primary-bg-color);
+}
+
+/* Footer Contacts Font Style */
+.footer-contacts {
+    font-style: normal; 
+    color: var(--footer-contacts-color); 
+}
+
+.footer-contacts:hover,
+.footer-contacts:focus {
+    color: var(--accent-color);
+}
+
+/* Location link */
+.location {
+    --location-text-color: #ffffff;
+    color: var(--location-text-color);
+
+    text-decoration: none;
+}
+
+.location:hover,
+.location:focus {
+    color: var(--accent-color);
+}
+
+
+
+
+
+
+
+
+
+/* -------------  PORTFOLIO CSS  -------------- */
+
+/* Main Section */
+.section-work-examples {
+    background-color: var(--primary-bg-color);
+}
+
+/* Filter Buttons */
+.filter-btn {
+    color: var(--title-text-color);
+    background-color: var(--third-bg-color);
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: inherit;    
+    cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+    color: var(--primary-bg-color);
+    background-color: var(--accent-color);
+    cursor: pointer;
+}
+
+/* Work Examples Link */
+.work-examples-link {
+    text-decoration: none;
+}
+
+/* Work Examples Card */
+.work-examples-card {
+    background-color: var(--primary-bg-color);
+}
+
+/* Work Examples Title */
+.work-examples-title {
+    color: var(--title-text-color);
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+/* Work Examples Text  */
+.work-examples-text {
+    color: var(--primary-text-color);
+
+    font-size: 16px;
+    line-height: 1.88;
+}
