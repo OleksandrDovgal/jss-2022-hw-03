@@ -19,14 +19,47 @@ body {
     letter-spacing: 0.03em;
 }
 
+/* Container */
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+}
+
+/* Reset Margin */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 /* main bgc: #FFFFFF; */
 /* section-Наша-команда background: #F5F4FA; */
 /* Hero background: #2F303A; */
 /* Team background: #F5F4FA; */  
 
+.header-page {
+    border-bottom: 1px solid #ECECEC;
+}
+
 
 /* Logo common styles in header & footer */
 .common-logo {
+    margin-right: 93px;
+    
     text-decoration: none;
 
     font-family: Raleway, sans-serif;
@@ -41,16 +74,35 @@ body {
 
 /* Content >Studio< in header logo */
 .header-logo {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
     color: var(--header-logo-black-color);
 }
 
-/* Відміна disc для ul > li */
+/* Reset for ul */
 .list {
+    padding: 0;
+    margin: 0;
+
     list-style: none;
 }
 
 /* Site nav */
+.site-nav {
+    display: flex;
+}
+
+/* Site Nav Item */
+.site-nav .item:not(:last-child) {
+    margin-right: 50px;
+}
+
 .site-nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     color: var(--title-text-color);
     text-decoration: none;
 
@@ -68,6 +120,19 @@ body {
     color: var(--accent-color);
 }
 
+/* Header Contacts List */
+.header-contacts-list {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-left: auto;
+}
+
+/* Header Contacts Item Margin-Left */
+.header-contacts-list .item + .item {
+    margin-left: 50px;
+}
+
 /* Phone & email links common style */
 .contact-links {
     color: var(--primary-text-color);
@@ -76,6 +141,9 @@ body {
 
 /* Header Contacts Font Styles */
 .header-contacts {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -91,31 +159,44 @@ body {
 .hero {
     color: var(--primary-bg-color);
     background-color: var(--hero-bg-color);
+
+    text-align: center;
 }
 
 /* Hero Title */
 .hero-title {
-font-weight: 900;
-font-size: 44px;
-line-height: 1.36;
-letter-spacing: 0.06em;
+    margin-bottom: 30px;
 
-text-align: center;
-text-transform: uppercase;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+
+    text-transform: uppercase;
+}
+
+/* Basic Styles For Buttons */
+.basic-button {
+    min-width: 73px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+    text-align: center;
+
+    cursor: pointer;
 }
 
 /* Hero Button */
 .hero-btn {
+    padding: 10px 32px;
     --btn-color: #ffffff; 
     color: var(--btn-color);/* New local CSS-custom-prop with correct name, not Global var(--primary-bg-color)*/
     background-color: var(--accent-color);
     
-    font-family: inherit;
     font-weight: 700;
-    font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
-    cursor: pointer;
 } 
 
 .hero-btn:hover,
@@ -125,8 +206,22 @@ text-transform: uppercase;
     /* New local CSS-custom-prop for just one used color */
 }
 
+/* Div Section Combine */
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+/* Section List */
+.section-list-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+
 /* Section Title */
 .section-title {
+    margin-bottom: 50px;
+    
     color: var(--title-text-color);
 
     font-weight: 700;
@@ -135,14 +230,39 @@ text-transform: uppercase;
     text-align: center;
 }
 
+/* Section List Image */
+.section-list .image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Feature List */
+.feature-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Feature List Items */
+.feature-list-item {
+    width: 270px;
+}
+
 /* Feature List Title */
 .feature-list .title {
+    margin-bottom: 10px;
+
     color: var(--title-text-color);
 
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+}
+
+/* Feature List Paragraph */
+.feature-list .text {
+    margin-bottom: 118px;
 }
 
 /* Our Team */
@@ -154,10 +274,22 @@ text-transform: uppercase;
     /* width: 270px;
     height: 368px; */
     background-color: var(--primary-bg-color);
+
+    border-radius: 0px 0px 4px 4px;
+}
+
+/* Team Member Image */
+.team-member-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
 }
 
 /* Team Member - common styles for name and role*/
 .team-member {
+    margin-bottom: 10px;
+
     color: var(--title-text-color);
 
     font-weight: 500;
@@ -168,19 +300,33 @@ text-transform: uppercase;
 
 /* Team Member Role Content */
 .member-role {
+    padding-bottom: 30px;
+    margin-bottom: 0;
+
     color: var(--primary-text-color);
 
     font-weight: 400;
 }
 
 /* Footer */
-.footer {
+.footer-page {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
     background: var(--hero-bg-color);
 }
 
 /* Content >Studio< in footer logo */
 .footer-logo {
+    display: inline-block;
+    margin-bottom: 20px;
+
     color: var(--primary-bg-color);
+}
+
+/* Address List Ttem Margin-Bottom */
+.address-list-item:not(:last-child) {
+    margin-bottom: 9px;
 }
 
 /* Footer Contacts Font Style */
@@ -218,24 +364,37 @@ text-transform: uppercase;
 /* -------------  PORTFOLIO CSS  -------------- */
 
 /* Main Section */
-.section-work-examples {
+.work-examples {
     background-color: var(--primary-bg-color);
+}
+
+/* Filter Buttons List */
+.filter-btn-list {
+    justify-content: center;
 }
 
 /* Filter Buttons */
 .filter-btn {
+    padding: 6px 22px;
+    margin-bottom: 50px;
+
     color: var(--title-text-color);
     background-color: var(--third-bg-color);
 
-    font-family: inherit;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-    letter-spacing: inherit;    
-    cursor: pointer;
+    line-height: 1.63;
+    letter-spacing: inherit;  
 }
 
+/* Filter Buttons Margin-Right */
+.filter-btn-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+/* Filter Button Current */
 .filter-btn-list .filter-btn.current {
+    padding: 6px 25px;
+
     --filter-btn-color: #FFFFFF;
     color: var(--filter-btn-color);
     /* New local CSS-custom-prop */
@@ -249,6 +408,30 @@ text-transform: uppercase;
     cursor: pointer;
 }
 
+/* Work Examples */
+.work-examples-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Work Examples Item */
+.work-examples-list > .item {
+    width: 370px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #EEEEEE;
+}
+
+/* Reset Margin-Right For Every Thirth Work Examples Item */
+.work-examples-list .item:nth-child(3n) {
+    margin-right: 0;
+}
+
+/* Reset Margin-Bottom For Last Three Work Examples Item */
+.work-examples-list .item:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+}
+
 /* Work Examples Link */
 .work-examples-link {
     text-decoration: none;
@@ -259,8 +442,18 @@ text-transform: uppercase;
     background-color: var(--primary-bg-color);
 }
 
+/* Work Examples Image */
+.work-examples-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
 /* Work Examples Title */
 .work-examples-title {
+    margin-bottom: 4px;
+
     color: var(--title-text-color);
 
     font-weight: 700;
@@ -271,8 +464,16 @@ text-transform: uppercase;
 
 /* Work Examples Text  */
 .work-examples-text {
+    margin-bottom: 20px;
+
     color: var(--primary-text-color);
 
     font-size: 16px;
     line-height: 1.88;
+}
+
+/* Content Work Examples Title & Work Examples Text */
+.work-examples-list .content {
+    padding-left: 24px;
+    padding-right: 24px;
 }
